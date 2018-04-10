@@ -19,7 +19,15 @@
 # substituindo apenas o comando print(questão...) existente.
 ##
 def main():
-    print("questao 7")
+    ano = int(input('Digite um ano: '))
+
+    if ( ano % 4 ) == 0 :
+        print('O ano é Bissexto!')
+    elif ( ano % 100 ) == 0 and ( ano % 400 ) == 0 :
+        print('O ano é Bissexto!')
+    else :
+        print('O ano não é Bissexto.')
+
 
 
     

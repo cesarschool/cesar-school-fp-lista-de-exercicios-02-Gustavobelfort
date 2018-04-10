@@ -11,7 +11,21 @@
 # substituindo apenas o comando print(questão...) existente.
 ##
 def main():
-    print("questao 5")
+    a = float(input('Digite a medida do primeiro lado:'))
+    b = float(input('Digite a medida do segundo lado:'))
+    c = float(input('Digite a medida do terceiro lado:'))
+
+    isosceles = [a,b,c]
+
+    if a == b and a == c :
+        print('O triangulo é equilátero.')
+
+    elif a != b and a != c :
+        print('O triângulo é escaleno.')
+    
+    elif ( isosceles.count(a) or isosceles.count(b) or isosceles.count(c) ) == 2:
+        print('O triângulo é isósceles.')
+
 
 
     

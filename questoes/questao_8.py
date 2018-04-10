@@ -17,9 +17,13 @@
 # Para a correta execução do programa, a estrutura atual deve ser mantida,
 # substituindo apenas o comando print(questão...) existente.
 ##
-def main():
-    print("questao 8")
 
+import datetime
+
+def main():
+    data1 = input('Digite a data (ANO-MÊS-DIA): ')
+    data2 = datetime.datetime.strptime(data1, '%Y-%m-%d') + datetime.timedelta(days=1)
+    print(data1 + " mais um dia será : " + data2.strftime('%Y-%m-%d'))
 
     
 if __name__ == '__main__':

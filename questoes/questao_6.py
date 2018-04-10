@@ -12,7 +12,29 @@
 # substituindo apenas o comando print(questão...) existente.
 ##
 def main():
-    print("questao 6")
+
+    #recebe input do usuário e transforma em array
+    cadeia = input('Digite a cadeia de DNA a ser analizada (A,T,G,C): ')
+    cadeia = list(cadeia)
+
+    #porcentagem de nucleotídeos no array
+    porA = ( cadeia.count('A') / len(cadeia) ) * 100
+    porT = ( cadeia.count('T') / len(cadeia) ) * 100
+    porG = ( cadeia.count('G') / len(cadeia) ) * 100
+    porC = ( cadeia.count('C') / len(cadeia) ) * 100
+
+    #conta nucleotídeos inválidos
+    invalidos = len(cadeia) - cadeia.count('A') - cadeia.count('C') - cadeia.count('G') - cadeia.count('T')
+    porInvalidos = ( invalidos / len(cadeia) ) * 100
+
+    print('O número de nucleotídeos inválidos é: {} o que equivale a {}% do total de nucleotídeos.'.format(invalidos, porInvalidos))
+    print('A porcentagem de nucleotídeos A é de: {}%'.format(porA))
+    print('A porcentagem de nucleotídeos T é de: {}%'.format(porT))
+    print('A porcentagem de nucleotídeos G é de: {}%'.format(porG))
+    print('A porcentagem de nucleotídeos C é de: {}%'.format(porC))
+    
+    #imprime a cadeia
+    print(cadeia)
 
 
     

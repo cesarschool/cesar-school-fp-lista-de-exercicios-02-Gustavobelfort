@@ -14,7 +14,17 @@
 # substituindo apenas o comando print(questão...) existente.
 ##
 def main():
-    print("questao 4")
+    valorCasa = float(input('Digite o valor da casa: R$'))
+    salario = float(input('Digite o valor do salário: R$'))
+    anos = float(input('Digite a quantidade de anos a pagar: '))
+
+    prestacao = valorCasa / ( anos * 12 )
+
+    if prestacao < ( salario * 0.3):
+        print('Empréstimo aprovado !!!')
+    else:
+        print('Empréstimo não foi aprovado.')
+
 
 
     

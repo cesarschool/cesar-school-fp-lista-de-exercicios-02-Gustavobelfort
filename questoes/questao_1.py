@@ -9,9 +9,17 @@
 # substituindo apenas o comando print(questão...) existente.
 ##
 def main():
-    print("questao 1")
-    
+    a = int(input('Digite o primeiro inteiro: '))
+    b = int(input('Digite o segundo inteiro: '))
+    c = int(input('Digite o terceiro inteiro: '))
+    d = int(input('Digite o quarto inteiro: '))
+    e = int(input('Digite o quinto inteiro: '))
+    lista = [a, b, c, d ,e]
+    lista.sort()
+    print('O maior dos inteiros é: {}'.format(lista[-1]))
+    print('O menor dos inteiros é: {}'.format(lista[0]))
 
 
 if __name__ == '__main__':
     main()
+    
